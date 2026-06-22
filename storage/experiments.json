@@ -6,5 +6,19 @@
     "learning_rate": 0.0001,
     "status": "completed",
     "timestamp": "2026-04-26T16:42:56.962399"
+  },
+  {
+    "model": "Qwen-0.5B",
+    "lora_rank": 8,
+    "status": "demo",
+    "timestamp": "2026-06-22T15:30:03.754488"
+  },
+  {
+    "model": "D:\\Study\\python\\lora_platform\\models\\Qwen2___5-0___5B-Instruct",
+    "lora_rank": 8,
+    "epochs": 3,
+    "learning_rate": 0.0001,
+    "status": "completed",
+    "timestamp": "2026-06-22T16:07:49.818337"
   }
 ]
