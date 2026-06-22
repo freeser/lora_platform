@@ -1,0 +1,10 @@
+[
+  {
+    "model": "D:\\\u6587\u6863\\\u4eba\u5de5\u667a\u80fd\u5b66\u4e60\\\u6570\u636e\u96c6+\u6a21\u578b\\\u6a21\u578b\\models\\Qwen\\Qwen2___5-0___5B-Instruct",
+    "lora_rank": 4,
+    "epochs": 1,
+    "learning_rate": 0.0001,
+    "status": "completed",
+    "timestamp": "2026-04-26T16:42:56.962399"
+  }
+]

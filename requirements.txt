@@ -1,0 +1,23 @@
+# ---------- 核心依赖 ----------
+accelerate==1.11.0
+transformers==4.57.1
+peft==0.17.1
+bitsandbytes==0.49.2
+torch==2.6.0
+# pip install torch==2.6.0+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
+scikit-learn==1.7.2
+pandas==2.3.2
+numpy==1.26.3
+
+# ---------- Web 服务 ----------
+fastapi==0.128.7
+uvicorn==0.40.0
+gradio==6.13.0
+python-multipart==0.0.20
+
+# ---------- 部署工具 ----------
+docker==7.1.0
+
+# ---------- 前端调用 API 所需 ----------
+requests==2.32.5
+
