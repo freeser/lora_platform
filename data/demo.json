@@ -1,0 +1,24 @@
+[
+  {
+    "system": "你是个助手",
+    "conversation": [
+      {
+        "human": "你好",
+        "assistant": "你好！有什么可以帮你的吗？"
+      }
+    ]
+  },
+  {
+    "system": "",
+    "conversation": [
+      {
+        "human": "天气如何",
+        "assistant": "今天天气晴，适合出行。"
+      }
+    ]
+  },
+  {
+    "system": null,
+    "conversation": ""
+  }
+]
