@@ -11,15 +11,23 @@ class Deployer:
         self.client = docker.from_env()
 
     def create_docker_image(self, model_path, image_name):
+        # 计算相对于构建上下文(项目根目录)的路径
         abs_model_path = os.path.abspath(model_path)
-        model_dir = os.path.dirname(abs_model_path)
-        model_name_in_container = os.path.basename(abs_model_path)
+        abs_project_root = os.path.abspath(".")
+        model_path_relative = os.path.relpath(abs_model_path, abs_project_root)
+        print(abs_model_path)
+        print(abs_project_root)
+        print(model_path_relative)
+        # 确保 api 模板存在
+        self.generate_api_template("api")
+
         dockerfile_content = f"""
-FROM python:3.9-slim
+FROM python:3.10-slim
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-COPY {model_dir} /app/model
+COPY api/ /app/api/
+COPY {model_path_relative} /app/model
 EXPOSE 8000
 CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]
 """
@@ -58,6 +66,6 @@ async def generate(text: str):
 if __name__ == "__main__":
     print("部署模块演示：需要安装 Docker 且有 Docker 环境。")
     d = Deployer()
-    # d.create_docker_image("models/some_model", "test_image")
+    d.create_docker_image("models/Qwen2___5-0___5B-Instruct", "test_image")
     d.generate_api_template("api_template")
     print("已生成 API 模板文件到 api_template/main.py")

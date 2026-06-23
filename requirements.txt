@@ -35,7 +35,6 @@ Pygments==2.20.0
 python-dateutil==2.9.0.post0
 python-multipart==0.0.20
 pytz==2026.2
-pywin32==312
 regex==2026.5.9
 requests==2.32.5
 rich==15.0.0
@@ -58,7 +57,7 @@ typing-inspection==0.4.2
 tzdata==2026.2
 uvicorn==0.40.0
 
-torch==2.7.1+cu118
-torchaudio==2.7.1+cu118
-torchvision==0.22.1+cu118
+torch==2.7.1
+torchaudio==2.7.1
+torchvision==0.22.1
 sympy==1.14.0
